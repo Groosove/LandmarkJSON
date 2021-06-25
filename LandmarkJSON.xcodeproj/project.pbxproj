@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4ACDFD8E268493CE005D257E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFD8D268493CE005D257E /* AppDelegate.swift */; };
+		4ACDFD92268493CE005D257E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFD91268493CE005D257E /* ViewController.swift */; };
+		4ACDFD9A268493D1005D257E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ACDFD99268493D1005D257E /* Assets.xcassets */; };
+		4ACDFD9D268493D1005D257E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACDFD9B268493D1005D257E /* LaunchScreen.storyboard */; };
+		4ACDFDAE2684A801005D257E /* LandmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFDAD2684A801005D257E /* LandmarkModel.swift */; };
+		4ACDFDB12684AC37005D257E /* loadDataFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFDB02684AC37005D257E /* loadDataFromJSON.swift */; };
+		4ACDFDB72684AEC7005D257E /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ACDFDB62684AEC7005D257E /* landmarkData.json */; };
+		4ACDFDB92684AF54005D257E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFDB82684AF54005D257E /* Router.swift */; };
+		4ACDFDBB2684B293005D257E /* LandmarkViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFDBA2684B293005D257E /* LandmarkViewCellPresenter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4ACDFD8A268493CD005D257E /* LandmarkJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ACDFD8D268493CE005D257E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4ACDFD91268493CE005D257E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4ACDFD99268493D1005D257E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4ACDFD9C268493D1005D257E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4ACDFD9E268493D1005D257E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4ACDFDAD2684A801005D257E /* LandmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkModel.swift; sourceTree = "<group>"; };
+		4ACDFDB02684AC37005D257E /* loadDataFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadDataFromJSON.swift; sourceTree = "<group>"; };
+		4ACDFDB62684AEC7005D257E /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = landmarkData.json; path = "../../../Downloads/Тестовое задание/landmarkData.json"; sourceTree = "<group>"; };
+		4ACDFDB82684AF54005D257E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4ACDFDBA2684B293005D257E /* LandmarkViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkViewCellPresenter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4ACDFD87268493CD005D257E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4ACDFD81268493CD005D257E = {
+			isa = PBXGroup;
+			children = (
+				4ACDFD8C268493CD005D257E /* LandmarkJSON */,
+				4ACDFD8B268493CD005D257E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4ACDFD8B268493CD005D257E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4ACDFD8A268493CD005D257E /* LandmarkJSON.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4ACDFD8C268493CD005D257E /* LandmarkJSON */ = {
+			isa = PBXGroup;
+			children = (
+				4ACDFDA82684985D005D257E /* View */,
+				4ACDFDA92684986A005D257E /* Interactor */,
+				4ACDFDAA26849887005D257E /* Presenter */,
+				4ACDFDAB26849894005D257E /* Entity */,
+				4ACDFDAC268498CC005D257E /* Router */,
+				4ACDFD8D268493CE005D257E /* AppDelegate.swift */,
+				4ACDFD9B268493D1005D257E /* LaunchScreen.storyboard */,
+				4ACDFD9E268493D1005D257E /* Info.plist */,
+				4ACDFDB62684AEC7005D257E /* landmarkData.json */,
+				4ACDFD99268493D1005D257E /* Assets.xcassets */,
+			);
+			path = LandmarkJSON;
+			sourceTree = "<group>";
+		};
+		4ACDFDA82684985D005D257E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4ACDFD91268493CE005D257E /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4ACDFDA92684986A005D257E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4ACDFDB02684AC37005D257E /* loadDataFromJSON.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4ACDFDAA26849887005D257E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4ACDFDBA2684B293005D257E /* LandmarkViewCellPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4ACDFDAB26849894005D257E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4ACDFDAD2684A801005D257E /* LandmarkModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4ACDFDAC268498CC005D257E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4ACDFDB82684AF54005D257E /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4ACDFD89268493CD005D257E /* LandmarkJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ACDFDA1268493D1005D257E /* Build configuration list for PBXNativeTarget "LandmarkJSON" */;
+			buildPhases = (
+				4ACDFD86268493CD005D257E /* Sources */,
+				4ACDFD87268493CD005D257E /* Frameworks */,
+				4ACDFD88268493CD005D257E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LandmarkJSON;
+			productName = LandmarkJSON;
+			productReference = 4ACDFD8A268493CD005D257E /* LandmarkJSON.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4ACDFD82268493CD005D257E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4ACDFD89268493CD005D257E = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 4ACDFD85268493CD005D257E /* Build configuration list for PBXProject "LandmarkJSON" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4ACDFD81268493CD005D257E;
+			productRefGroup = 4ACDFD8B268493CD005D257E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4ACDFD89268493CD005D257E /* LandmarkJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4ACDFD88268493CD005D257E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ACDFD9D268493D1005D257E /* LaunchScreen.storyboard in Resources */,
+				4ACDFD9A268493D1005D257E /* Assets.xcassets in Resources */,
+				4ACDFDB72684AEC7005D257E /* landmarkData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4ACDFD86268493CD005D257E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ACDFD92268493CE005D257E /* ViewController.swift in Sources */,
+				4ACDFDB12684AC37005D257E /* loadDataFromJSON.swift in Sources */,
+				4ACDFDBB2684B293005D257E /* LandmarkViewCellPresenter.swift in Sources */,
+				4ACDFDB92684AF54005D257E /* Router.swift in Sources */,
+				4ACDFDAE2684A801005D257E /* LandmarkModel.swift in Sources */,
+				4ACDFD8E268493CE005D257E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4ACDFD9B268493D1005D257E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ACDFD9C268493D1005D257E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4ACDFD9F268493D1005D257E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4ACDFDA0268493D1005D257E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4ACDFDA2268493D1005D257E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7476264FZ;
+				INFOPLIST_FILE = LandmarkJSON/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ALR.LandmarkJSON;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4ACDFDA3268493D1005D257E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7476264FZ;
+				INFOPLIST_FILE = LandmarkJSON/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ALR.LandmarkJSON;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4ACDFD85268493CD005D257E /* Build configuration list for PBXProject "LandmarkJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ACDFD9F268493D1005D257E /* Debug */,
+				4ACDFDA0268493D1005D257E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ACDFDA1268493D1005D257E /* Build configuration list for PBXNativeTarget "LandmarkJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ACDFDA2268493D1005D257E /* Debug */,
+				4ACDFDA3268493D1005D257E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4ACDFD82268493CD005D257E /* Project object */;
+}
