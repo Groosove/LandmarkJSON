@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CE3218C22090699028461D2 /* LandmarkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C3614E35124D94E60ABD1 /* LandmarkProvider.swift */; };
+		0EA47866028615A6FECECE78 /* fooInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84C24A3B81D3286988A1C0 /* fooInteractor.swift */; };
+		15222AF4B2E15CBE8C0BFDF9 /* fooService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84FFB601A775F098B23DCC3 /* fooService.swift */; };
+		21D28C0D0C6FC4A89458E759 /* fooModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DB19EC26F57C78BB2CDDCD /* fooModel.swift */; };
+		345D084B61DB2EB3645CF9E8 /* LandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB558382A647F95BA4C5DE0 /* LandmarkService.swift */; };
+		4222FE4DEDF951BE62CC84CD /* fooBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011119158743456556B21F7 /* fooBuilder.swift */; };
 		4ACDFD8E268493CE005D257E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFD8D268493CE005D257E /* AppDelegate.swift */; };
 		4ACDFD92268493CE005D257E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFD91268493CE005D257E /* ViewController.swift */; };
 		4ACDFD9A268493D1005D257E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ACDFD99268493D1005D257E /* Assets.xcassets */; };
@@ -16,9 +22,26 @@
 		4ACDFDB72684AEC7005D257E /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ACDFDB62684AEC7005D257E /* landmarkData.json */; };
 		4ACDFDB92684AF54005D257E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFDB82684AF54005D257E /* Router.swift */; };
 		4ACDFDBB2684B293005D257E /* LandmarkViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFDBA2684B293005D257E /* LandmarkViewCellPresenter.swift */; };
+		4C1FEEB1EA540F277A5CBFED /* fooDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9101BDFE279A6546B4D81 /* fooDataStore.swift */; };
+		5A2251366F154708FBCFACEF /* LandmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6577A22CF014BBA4BA75B535 /* LandmarkPresenter.swift */; };
+		6AC5F492C944E844665FD3D0 /* fooDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3A4736C7564D225E76867A /* fooDataFlow.swift */; };
+		84349E1F1CE2922FBDEA105A /* LandmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383606984BD3C6A84C98044 /* LandmarkView.swift */; };
+		891A38DA1D46E32EE479539D /* fooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DE3107FE0E3B6D50776BD /* fooViewController.swift */; };
+		89949F44BEFAF577EC3B1D43 /* LandmarkDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50A4716B51791EF17B0403A /* LandmarkDataFlow.swift */; };
+		965720C25D48BD356AE6D0CB /* LandmarkDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21A6C0A3CC62C2169517A11 /* LandmarkDataStore.swift */; };
+		B11023DDD9FD22A243D13EE0 /* LandmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4FA4619FCB81F9C3CDCFC9 /* LandmarkInteractor.swift */; };
+		B2B9957EEED6C91E4FD1442F /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FEB6BC33A83FC6A2CBFA1F /* LandmarkViewController.swift */; };
+		B80920C0FF82FD7535EC3F43 /* LandmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229ED3FBD765C6F6DF70831 /* LandmarkModel.swift */; };
+		C2BDF59E95C6A9599F13CDF4 /* fooView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1079C003CE3EA97B39F510 /* fooView.swift */; };
+		CF059676937CF36B59A0C913 /* LandmarkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8855BAF91B1E0AE8EA9885 /* LandmarkBuilder.swift */; };
+		D14704D8688769ADDA1B2BCC /* fooProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BFB2DA887B41FDAEDB715C /* fooProvider.swift */; };
+		F335E58F5E6579CD338D30DD /* fooPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC486A178A90A2DF985F52D5 /* fooPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1383606984BD3C6A84C98044 /* LandmarkView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkView.swift; sourceTree = "<group>"; };
+		249DE3107FE0E3B6D50776BD /* fooViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooViewController.swift; sourceTree = "<group>"; };
+		44FEB6BC33A83FC6A2CBFA1F /* LandmarkViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
 		4ACDFD8A268493CD005D257E /* LandmarkJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACDFD8D268493CE005D257E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ACDFD91268493CE005D257E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +53,23 @@
 		4ACDFDB62684AEC7005D257E /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = landmarkData.json; path = "../../../Downloads/Тестовое задание/landmarkData.json"; sourceTree = "<group>"; };
 		4ACDFDB82684AF54005D257E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4ACDFDBA2684B293005D257E /* LandmarkViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkViewCellPresenter.swift; sourceTree = "<group>"; };
+		4C1079C003CE3EA97B39F510 /* fooView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooView.swift; sourceTree = "<group>"; };
+		58DB19EC26F57C78BB2CDDCD /* fooModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooModel.swift; sourceTree = "<group>"; };
+		6229ED3FBD765C6F6DF70831 /* LandmarkModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkModel.swift; sourceTree = "<group>"; };
+		6577A22CF014BBA4BA75B535 /* LandmarkPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkPresenter.swift; sourceTree = "<group>"; };
+		68D9101BDFE279A6546B4D81 /* fooDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooDataStore.swift; sourceTree = "<group>"; };
+		7FB558382A647F95BA4C5DE0 /* LandmarkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkService.swift; sourceTree = "<group>"; };
+		848C3614E35124D94E60ABD1 /* LandmarkProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkProvider.swift; sourceTree = "<group>"; };
+		9011119158743456556B21F7 /* fooBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooBuilder.swift; sourceTree = "<group>"; };
+		9D84C24A3B81D3286988A1C0 /* fooInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooInteractor.swift; sourceTree = "<group>"; };
+		AC3A4736C7564D225E76867A /* fooDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooDataFlow.swift; sourceTree = "<group>"; };
+		B8BFB2DA887B41FDAEDB715C /* fooProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooProvider.swift; sourceTree = "<group>"; };
+		BC8855BAF91B1E0AE8EA9885 /* LandmarkBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkBuilder.swift; sourceTree = "<group>"; };
+		C84FFB601A775F098B23DCC3 /* fooService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooService.swift; sourceTree = "<group>"; };
+		DC486A178A90A2DF985F52D5 /* fooPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = fooPresenter.swift; sourceTree = "<group>"; };
+		DC4FA4619FCB81F9C3CDCFC9 /* LandmarkInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkInteractor.swift; sourceTree = "<group>"; };
+		F21A6C0A3CC62C2169517A11 /* LandmarkDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkDataStore.swift; sourceTree = "<group>"; };
+		F50A4716B51791EF17B0403A /* LandmarkDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkDataFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +83,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0063A2AFC5E1844AD663567F /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				B8BFB2DA887B41FDAEDB715C /* fooProvider.swift */,
+				68D9101BDFE279A6546B4D81 /* fooDataStore.swift */,
+				C84FFB601A775F098B23DCC3 /* fooService.swift */,
+			);
+			name = Provider;
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		0741268FB1253804F43AE4CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1383606984BD3C6A84C98044 /* LandmarkView.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		4ACDFD81268493CD005D257E = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +132,8 @@
 				4ACDFD9E268493D1005D257E /* Info.plist */,
 				4ACDFDB62684AEC7005D257E /* landmarkData.json */,
 				4ACDFD99268493D1005D257E /* Assets.xcassets */,
+				8756D6266FF7CD8D1D1E5A9A /* foo */,
+				5526E93CC49B694A4D38C83F /* Landmark */,
 			);
 			path = LandmarkJSON;
 			sourceTree = "<group>";
@@ -114,6 +176,76 @@
 				4ACDFDB82684AF54005D257E /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		5526E93CC49B694A4D38C83F /* Landmark */ = {
+			isa = PBXGroup;
+			children = (
+				BC8855BAF91B1E0AE8EA9885 /* LandmarkBuilder.swift */,
+				44FEB6BC33A83FC6A2CBFA1F /* LandmarkViewController.swift */,
+				DC4FA4619FCB81F9C3CDCFC9 /* LandmarkInteractor.swift */,
+				6577A22CF014BBA4BA75B535 /* LandmarkPresenter.swift */,
+				F50A4716B51791EF17B0403A /* LandmarkDataFlow.swift */,
+				C12186E429AE188C8A46566C /* Model */,
+				CE4ED002E768A9AC78155B0D /* Provider */,
+				0741268FB1253804F43AE4CF /* View */,
+			);
+			name = Landmark;
+			path = Landmark;
+			sourceTree = "<group>";
+		};
+		64528DCB364F2A877A78F8D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58DB19EC26F57C78BB2CDDCD /* fooModel.swift */,
+			);
+			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8756D6266FF7CD8D1D1E5A9A /* foo */ = {
+			isa = PBXGroup;
+			children = (
+				9011119158743456556B21F7 /* fooBuilder.swift */,
+				249DE3107FE0E3B6D50776BD /* fooViewController.swift */,
+				9D84C24A3B81D3286988A1C0 /* fooInteractor.swift */,
+				DC486A178A90A2DF985F52D5 /* fooPresenter.swift */,
+				AC3A4736C7564D225E76867A /* fooDataFlow.swift */,
+				64528DCB364F2A877A78F8D5 /* Model */,
+				0063A2AFC5E1844AD663567F /* Provider */,
+				9131B798176DC2C00273A526 /* View */,
+			);
+			name = foo;
+			path = foo;
+			sourceTree = "<group>";
+		};
+		9131B798176DC2C00273A526 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C1079C003CE3EA97B39F510 /* fooView.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		C12186E429AE188C8A46566C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6229ED3FBD765C6F6DF70831 /* LandmarkModel.swift */,
+			);
+			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE4ED002E768A9AC78155B0D /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				848C3614E35124D94E60ABD1 /* LandmarkProvider.swift */,
+				F21A6C0A3CC62C2169517A11 /* LandmarkDataStore.swift */,
+				7FB558382A647F95BA4C5DE0 /* LandmarkService.swift */,
+			);
+			name = Provider;
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +324,26 @@
 				4ACDFDB92684AF54005D257E /* Router.swift in Sources */,
 				4ACDFDAE2684A801005D257E /* LandmarkModel.swift in Sources */,
 				4ACDFD8E268493CE005D257E /* AppDelegate.swift in Sources */,
+				4222FE4DEDF951BE62CC84CD /* fooBuilder.swift in Sources */,
+				891A38DA1D46E32EE479539D /* fooViewController.swift in Sources */,
+				0EA47866028615A6FECECE78 /* fooInteractor.swift in Sources */,
+				F335E58F5E6579CD338D30DD /* fooPresenter.swift in Sources */,
+				6AC5F492C944E844665FD3D0 /* fooDataFlow.swift in Sources */,
+				21D28C0D0C6FC4A89458E759 /* fooModel.swift in Sources */,
+				D14704D8688769ADDA1B2BCC /* fooProvider.swift in Sources */,
+				4C1FEEB1EA540F277A5CBFED /* fooDataStore.swift in Sources */,
+				15222AF4B2E15CBE8C0BFDF9 /* fooService.swift in Sources */,
+				C2BDF59E95C6A9599F13CDF4 /* fooView.swift in Sources */,
+				CF059676937CF36B59A0C913 /* LandmarkBuilder.swift in Sources */,
+				B2B9957EEED6C91E4FD1442F /* LandmarkViewController.swift in Sources */,
+				B11023DDD9FD22A243D13EE0 /* LandmarkInteractor.swift in Sources */,
+				5A2251366F154708FBCFACEF /* LandmarkPresenter.swift in Sources */,
+				89949F44BEFAF577EC3B1D43 /* LandmarkDataFlow.swift in Sources */,
+				B80920C0FF82FD7535EC3F43 /* LandmarkModel.swift in Sources */,
+				0CE3218C22090699028461D2 /* LandmarkProvider.swift in Sources */,
+				965720C25D48BD356AE6D0CB /* LandmarkDataStore.swift in Sources */,
+				345D084B61DB2EB3645CF9E8 /* LandmarkService.swift in Sources */,
+				84349E1F1CE2922FBDEA105A /* LandmarkView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
