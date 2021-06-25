@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0CE3218C22090699028461D2 /* LandmarkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C3614E35124D94E60ABD1 /* LandmarkProvider.swift */; };
 		345D084B61DB2EB3645CF9E8 /* LandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB558382A647F95BA4C5DE0 /* LandmarkService.swift */; };
+		4A9EDE6A268691A4003187FD /* SnapKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9EDE69268691A4003187FD /* SnapKit.xcframework */; };
 		4ACDFD8E268493CE005D257E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFD8D268493CE005D257E /* AppDelegate.swift */; };
 		4ACDFD92268493CE005D257E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDFD91268493CE005D257E /* ViewController.swift */; };
 		4ACDFD9A268493D1005D257E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ACDFD99268493D1005D257E /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		1383606984BD3C6A84C98044 /* LandmarkView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkView.swift; sourceTree = "<group>"; };
 		44FEB6BC33A83FC6A2CBFA1F /* LandmarkViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
+		4A9EDE69268691A4003187FD /* SnapKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SnapKit.xcframework; path = Carthage/Build/SnapKit.xcframework; sourceTree = "<group>"; };
 		4ACDFD8A268493CD005D257E /* LandmarkJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACDFD8D268493CE005D257E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ACDFD91268493CE005D257E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9EDE6A268691A4003187FD /* SnapKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,11 +70,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4A9EDE68268691A4003187FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A9EDE69268691A4003187FD /* SnapKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4ACDFD81268493CD005D257E = {
 			isa = PBXGroup;
 			children = (
 				4ACDFD8C268493CD005D257E /* LandmarkJSON */,
 				4ACDFD8B268493CD005D257E /* Products */,
+				4A9EDE68268691A4003187FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

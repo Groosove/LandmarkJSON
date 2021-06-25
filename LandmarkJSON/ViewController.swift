@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
@@ -13,7 +14,7 @@ class ViewController: UIViewController {
 	private lazy var tableView: UITableView = {
 		let tableView = UITableView(frame: self.view.frame)
 		
-		tableView.tableFooterView = UIView()
+//		tableView.tableFooterView = UIView()
 		return tableView
 	}()
 	

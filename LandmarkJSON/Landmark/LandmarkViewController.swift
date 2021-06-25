@@ -5,7 +5,7 @@
 
 import UIKit
 
-protocol LandmarkDisplayLogic: class {
+protocol LandmarkDisplayLogic: AnyObject {
     func displaySomething(viewModel: Landmark.Something.ViewModel)
 }
 
