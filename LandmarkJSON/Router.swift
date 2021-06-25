@@ -8,5 +8,5 @@
 import UIKit
 
 class Router {
-	var landmarks: [Landmark] = loadData(with: "landmark.json")
+//	var landmarks: [Landmark] = loadData(with: "landmark.json")
 }

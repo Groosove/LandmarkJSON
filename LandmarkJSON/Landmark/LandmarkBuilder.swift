@@ -5,6 +5,10 @@
 
 import UIKit
 
+protocol ModuleBuilder {
+    func build() -> UIViewController
+}
+
 class LandmarkBuilder: ModuleBuilder {
 
     var initialState: Landmark.ViewControllerState?
