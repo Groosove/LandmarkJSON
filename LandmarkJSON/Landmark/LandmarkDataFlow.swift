@@ -25,12 +25,13 @@ enum Landmark {
 
     enum ViewControllerState {
         case loading
-        case result([Any/*viewModel*/])
+        case result([LandmarkModel])
         case emptyResult
         case error(message: String)
     }
 
     enum LandmarkError: Error {
-        case someError(message: String)
+		case parseError(message: String)
+		case decodeError(message: String)
     }
 }

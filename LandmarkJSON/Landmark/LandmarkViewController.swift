@@ -25,7 +25,7 @@ class LandmarkViewController: UIViewController {
 
     // MARK: View lifecycle
     override func loadView() {
-        let view = LandmarkView(frame: UIScreen.main.bounds)
+        let view = LandmarkTableViewCell(frame: UIScreen.main.bounds)
         self.view = view
         // make additional setup of view or save references to subviews
     }
@@ -47,7 +47,7 @@ extension LandmarkViewController: LandmarkDisplayLogic {
         display(newState: viewModel.state)
     }
 
-    func display(newState: Landmark.ViewControllerState) {
+    private func display(newState: Landmark.ViewControllerState) {
         state = newState
         switch state {
         case .loading:

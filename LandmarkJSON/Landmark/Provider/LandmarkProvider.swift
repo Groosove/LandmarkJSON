@@ -10,12 +10,11 @@ enum LandmarkProviderError: Error {
     case getItemsFailed(underlyingError: Error)
 }
 
-/// Отвечает за получение данных модуля Landmark
 struct LandmarkProvider: LandmarkProviderProtocol {
     let dataStore: LandmarkDataStore
-    let service: LandmarkServiceProtocol
+    let service: LoadDataFromJSONProtocol
 
-    init(dataStore: LandmarkDataStore = LandmarkDataStore(), service: LandmarkServiceProtocol = LandmarkService()) {
+    init(dataStore: LandmarkDataStore = LandmarkDataStore(), service: LoadDataFromJSONProtocol = LoadDataFromJSON()) {
         self.dataStore = dataStore
         self.service = service
     }
@@ -24,12 +23,13 @@ struct LandmarkProvider: LandmarkProviderProtocol {
         if dataStore.models?.isEmpty == false {
             return completion(self.dataStore.models, nil)
         }
-        service.fetchItems { (array, error) in
+        service.loadData(with: "landmarkData.json") { (array, error) in
             if let error = error {
                 completion(nil, .getItemsFailed(underlyingError: error))
             } else if let models = array {
                 self.dataStore.models = models
                 completion(self.dataStore.models, nil)
+				print("Wow")
             }
         }
     }

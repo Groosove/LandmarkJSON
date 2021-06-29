@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/arturlutfullin/Desktop/LandmarkJSON/LandmarkJSON/landmarkData.json">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

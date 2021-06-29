@@ -24,10 +24,10 @@ class LandmarkInteractor: LandmarkBusinessLogic {
             if let items = items {
                 result = .success(items)
             } else if let error = error {
-                result = .failure(.someError(message: error.localizedDescription))
-            } else {
-                result = .failure(.someError(message: "No Data"))
-            }
+				result = .failure(.decodeError(message: error.localizedDescription))
+			} else  {
+				result = .failure(.parseError(message: "Empty data"))
+			}
             self.presenter.presentSomething(response: Landmark.Something.Response(result: result))
         }
     }
