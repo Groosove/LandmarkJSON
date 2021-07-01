@@ -7,7 +7,6 @@ protocol LandmarkBusinessLogic {
     func doSomething(request: Landmark.Something.Request)
 }
 
-/// Класс для описания бизнес-логики модуля Landmark
 class LandmarkInteractor: LandmarkBusinessLogic {
     let presenter: LandmarkPresentationLogic
     let provider: LandmarkProviderProtocol
@@ -16,10 +15,9 @@ class LandmarkInteractor: LandmarkBusinessLogic {
         self.presenter = presenter
         self.provider = provider
     }
-    
-    // MARK: Do something
+	
     func doSomething(request: Landmark.Something.Request) {
-        provider.getItems { (items, error) in
+        provider.getLandmarks { (items, error) in
             let result: Landmark.LandmarkRequestResult
             if let items = items {
                 result = .success(items)

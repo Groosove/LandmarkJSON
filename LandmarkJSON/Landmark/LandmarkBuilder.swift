@@ -6,7 +6,7 @@
 import UIKit
 
 protocol ModuleBuilder {
-    func build() -> UIViewController
+    func build() -> UINavigationController
 }
 
 class LandmarkBuilder: ModuleBuilder {
@@ -18,12 +18,13 @@ class LandmarkBuilder: ModuleBuilder {
         return self
     } 
 
-    func build() -> UIViewController {
+    func build() -> UINavigationController {
         let presenter = LandmarkPresenter()
         let interactor = LandmarkInteractor(presenter: presenter)
         let controller = LandmarkViewController(interactor: interactor)
 
         presenter.viewController = controller
-        return controller
+		let navigation = UINavigationController(rootViewController: controller)
+        return navigation
     }
 }

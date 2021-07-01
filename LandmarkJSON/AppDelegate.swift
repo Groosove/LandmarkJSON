@@ -16,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		
 		window = UIWindow(frame: UIScreen.main.bounds)
-		let rootVC = LandmarkBuilder()
-		window?.rootViewController = rootVC.build()
+		window?.rootViewController = LandmarkBuilder().set(initialState: .loading).build()
 		window?.makeKeyAndVisible()
         let urlCache = URLCache(memoryCapacity: 6 * 1024 * 1024, diskCapacity: 0, diskPath: nil)
         sharedCache = urlCache

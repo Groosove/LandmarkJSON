@@ -9,35 +9,43 @@ protocol LandmarkDisplayLogic: AnyObject {
     func displaySomething(viewModel: Landmark.Something.ViewModel)
 }
 
-class LandmarkViewController: UIViewController {
+protocol LandmarkViewControllerDelegate: AnyObject {
+	func landmarkDescription(id: Int)
+}
+
+class LandmarkViewController: UIViewController, LandmarkViewDelegate {
     let interactor: LandmarkBusinessLogic
     var state: Landmark.ViewControllerState
-
+	private var switchValue = true
+	var tableDataSource = LandmarkDataStore()
+	var tableDelegate = LandmarkTableViewDelegate()
+	lazy var customView = self.view as? LandmarkView
+	
     init(interactor: LandmarkBusinessLogic, initialState: Landmark.ViewControllerState = .loading) {
         self.interactor = interactor
         self.state = initialState
         super.init(nibName: nil, bundle: nil)
+		tableDelegate.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: View lifecycle
     override func loadView() {
-        let view = LandmarkTableViewCell(frame: UIScreen.main.bounds)
-        self.view = view
-        // make additional setup of view or save references to subviews
+		self.view = LandmarkView(delegate: self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		navigationController?.navigationBar.prefersLargeTitles = true
+		navigationItem.title = "Landmarks"
         doSomething()
     }
 
-    // MARK: Do something
-    func doSomething() {
-        let request = Landmark.Something.Request()
+    @objc func doSomething() {
+		switchValue = !switchValue
+		let request = Landmark.Something.Request(isActive: switchValue)
         interactor.doSomething(request: request)
     }
 }
@@ -55,9 +63,20 @@ extension LandmarkViewController: LandmarkDisplayLogic {
         case let .error(message):
             print("error \(message)")
         case let .result(items):
+			tableDelegate.models = items
+			tableDataSource.models = items
+			customView?.updateTableViewData(delegate: tableDelegate, dataSource: tableDataSource)
             print("result: \(items)")
         case .emptyResult:
             print("empty result")
         }
     }
+}
+
+extension LandmarkViewController: LandmarkViewControllerDelegate {
+	func landmarkDescription(id: Int) {
+		let rootVC = LandmarkDescriptionViewController()
+		let navVC = UINavigationController()
+		navVC.pushViewController(rootVC, animated: true)
+	}
 }

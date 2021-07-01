@@ -5,25 +5,18 @@
 import UIKit
 import CoreLocation
 
-typealias UniqueIdentifier = String
-
-protocol UniqueIdentifiable {
-    var uid: UniqueIdentifier { get }
-}
-
 struct LandmarkModel: Decodable {
-//	let uid: UniqueIdentifier
 	let name: String
 	let category: String
 	let city: String
 	let id: Int
 	let park: String
-	var coordinates: Coordinates
-	var imageName: String
+	private var coordinates: Coordinates
+	private var imageName: String
 	var isFavorite: Bool
 	
-	private var image: UIImage { UIImage(imageLiteralResourceName: imageName) }
-	private var coordinate: CLLocationCoordinate2D { CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude) }
+	var image: UIImage { UIImage(named: imageName)! }
+	var coordinate: CLLocationCoordinate2D { CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude) }
 	
 	struct Coordinates: Decodable {
 		var latitude: Double
@@ -31,8 +24,8 @@ struct LandmarkModel: Decodable {
 	}
 }
 
-//extension LandmarkModel: Equatable {
-//    static func == (lhs: LandmarkModel, rhs: LandmarkModel) -> Bool {
-//        return lhs.uid == rhs.uid
-//    }
-//}
+extension LandmarkModel: Equatable {
+    static func == (lhs: LandmarkModel, rhs: LandmarkModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

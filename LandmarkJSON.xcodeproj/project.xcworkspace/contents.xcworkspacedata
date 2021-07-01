@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/arturlutfullin/Desktop/LandmarkJSON/LandmarkJSON/Landmark/LandmarkDescriptionViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/arturlutfullin/Desktop/LandmarkJSON/LandmarkJSON/Landmark/LandmarkTableViewDelegate.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/arturlutfullin/Desktop/LandmarkJSON/LandmarkJSON/Landmark/View/LandmarkTableViewCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:/Users/arturlutfullin/Desktop/LandmarkJSON/LandmarkJSON/landmarkData.json">
    </FileRef>
    <FileRef

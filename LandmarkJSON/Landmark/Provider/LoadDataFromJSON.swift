@@ -10,7 +10,7 @@ protocol LoadDataFromJSONProtocol {
 
 class LoadDataFromJSON: LoadDataFromJSONProtocol {
 	func loadData(with filename: String, completion: @escaping ([LandmarkModel]?, Error?) -> Void) {
-		guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else { completion(nil, Landmark.LandmarkError.parseError(message: "\(filename) is uncorrect")); return }
+		guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else { completion(nil, Landmark.LandmarkError.parseError(message: "\(filename) is incorrect")); return }
 		
 		let dataOptinal = try? Data(contentsOf: file)
 		let decoder = JSONDecoder()

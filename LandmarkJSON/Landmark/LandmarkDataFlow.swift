@@ -7,7 +7,8 @@ enum Landmark {
     // MARK: Use cases
     enum Something {
         struct Request {
-        }
+			var isActive: Bool
+		}
 
         struct Response {
             var result: LandmarkRequestResult

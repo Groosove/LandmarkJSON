@@ -9,11 +9,9 @@ protocol LandmarkPresentationLogic {
     func presentSomething(response: Landmark.Something.Response)
 }
 
-/// Отвечает за отображение данных модуля Landmark
 class LandmarkPresenter: LandmarkPresentationLogic {
     weak var viewController: LandmarkDisplayLogic?
 
-    // MARK: Do something
     func presentSomething(response: Landmark.Something.Response) {
         var viewModel: Landmark.Something.ViewModel
         
