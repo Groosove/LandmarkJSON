@@ -16,7 +16,7 @@ class LandmarkBuilder: ModuleBuilder {
     func set(initialState: Landmark.ViewControllerState) -> LandmarkBuilder {
         self.initialState = initialState
         return self
-    } 
+    }
 
     func build() -> UINavigationController {
         let presenter = LandmarkPresenter()

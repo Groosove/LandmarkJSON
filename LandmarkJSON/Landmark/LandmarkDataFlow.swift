@@ -4,8 +4,7 @@
 //
 
 enum Landmark {
-    // MARK: Use cases
-    enum Something {
+    enum LoadData {
         struct Request {
 			var isActive: Bool
 		}
@@ -32,7 +31,7 @@ enum Landmark {
     }
 
     enum LandmarkError: Error {
-		case parseError(message: String)
-		case decodeError(message: String)
+		case loadDataError(message: String)
+		case emptyDataError(message: String)
     }
 }

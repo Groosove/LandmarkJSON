@@ -4,7 +4,7 @@
 //
 
 protocol LandmarkBusinessLogic {
-    func doSomething(request: Landmark.Something.Request)
+    func parseJSON(request: Landmark.LoadData.Request)
 }
 
 class LandmarkInteractor: LandmarkBusinessLogic {
@@ -15,18 +15,18 @@ class LandmarkInteractor: LandmarkBusinessLogic {
         self.presenter = presenter
         self.provider = provider
     }
-	
-    func doSomething(request: Landmark.Something.Request) {
+
+    func parseJSON(request: Landmark.LoadData.Request) {
         provider.getLandmarks { (items, error) in
             let result: Landmark.LandmarkRequestResult
             if let items = items {
-                result = .success(items)
+				result = .success(items.filter { $0.isFavorite || !request.isActive })
             } else if let error = error {
-				result = .failure(.decodeError(message: error.localizedDescription))
-			} else  {
-				result = .failure(.parseError(message: "Empty data"))
+				result = .failure(.loadDataError(message: error.localizedDescription))
+			} else {
+				result = .failure(.emptyDataError(message: "Empty data"))
 			}
-            self.presenter.presentSomething(response: Landmark.Something.Response(result: result))
+            self.presenter.presentData(response: Landmark.LoadData.Response(result: result))
         }
     }
 }

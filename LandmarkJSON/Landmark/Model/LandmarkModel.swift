@@ -11,13 +11,17 @@ struct LandmarkModel: Decodable {
 	let city: String
 	let id: Int
 	let park: String
-	private var coordinates: Coordinates
-	private var imageName: String
-	var isFavorite: Bool
-	
+	let state: String
+	private let coordinates: Coordinates
+	private let imageName: String
+	let isFavorite: Bool
+	let description: String
+
 	var image: UIImage { UIImage(named: imageName)! }
-	var coordinate: CLLocationCoordinate2D { CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude) }
-	
+	var coordinate: CLLocationCoordinate2D {
+		CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+	}
+
 	struct Coordinates: Decodable {
 		var latitude: Double
 		var longitude: Double

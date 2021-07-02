@@ -13,8 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var sharedCache = URLCache.shared
 
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions
+						launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
 		window = UIWindow(frame: UIScreen.main.bounds)
 		window?.rootViewController = LandmarkBuilder().set(initialState: .loading).build()
 		window?.makeKeyAndVisible()
@@ -38,4 +39,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

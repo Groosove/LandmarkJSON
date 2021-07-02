@@ -7,7 +7,9 @@ protocol LandmarkProviderProtocol {
 }
 
 enum LandmarkProviderError: Error {
-    case getItemsFailed(underlyingError: Error)
+	case filenameError(message: String)
+	case parseError(message: String)
+	case decodeError(message: String)
 }
 
 struct LandmarkProvider: LandmarkProviderProtocol {
@@ -24,12 +26,11 @@ struct LandmarkProvider: LandmarkProviderProtocol {
             return completion(self.dataStore.models, nil)
         }
         service.loadData(with: "landmarkData.json") { (array, error) in
-            if let error = error {
-                completion(nil, .getItemsFailed(underlyingError: error))
+            if let error = error as? LandmarkProviderError {
+                completion(nil, error)
             } else if let models = array {
                 self.dataStore.models = models
                 completion(self.dataStore.models, nil)
-				print("Wow")
             }
         }
     }

@@ -6,51 +6,53 @@ import UIKit
 import SnapKit
 
 @objc protocol LandmarkViewDelegate: AnyObject {
-	func doSomething()
+	func parseJSON()
 }
 
 class LandmarkView: UIView {
 	static let identifier = "LandmarkCellId"
 	weak var delegate: LandmarkViewDelegate?
-	
+
 	private lazy var isFavoriteLabel: UILabel = {
 		let label = UILabel()
 		label.text = "Favorites only"
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
-	
+
     private lazy var isFavoriteSwitch: UISwitch = {
 		let isFavoriteSwitch = UISwitch()
 		isFavoriteSwitch.isOn = false
 		isFavoriteSwitch.translatesAutoresizingMaskIntoConstraints = false
-		isFavoriteSwitch.addTarget(delegate, action: #selector(delegate?.doSomething), for: .touchUpInside)
+		isFavoriteSwitch.addTarget(delegate, action: #selector(delegate?.parseJSON), for: .touchUpInside)
         return isFavoriteSwitch
     }()
-	
+
 	private var tableView = UITableView.init(frame: .zero, style: .plain)
-	
+
 	init(delegate: LandmarkViewDelegate) {
-		tableView.register(LandmarkTableViewCell.self, forCellReuseIdentifier: LandmarkTableViewCell.identifier)
 		super.init(frame: UIScreen.main.bounds)
+		tableView.register(LandmarkTableViewCell.self, forCellReuseIdentifier: LandmarkTableViewCell.identifier)
+		tableView.separatorColor = .white
+		tableView.tableFooterView = UIView()
+		tableView.tableHeaderView = UIView()
 		backgroundColor = .white
 		self.delegate = delegate
 		addSubviews()
 		makeConstraints()
 	}
-	
+
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	
-	
-    func addSubviews(){
+
+    private func addSubviews() {
 		addSubview(isFavoriteLabel)
         addSubview(isFavoriteSwitch)
 		addSubview(tableView)
     }
 
-    func makeConstraints() {
+    private func makeConstraints() {
 		isFavoriteLabel.snp.makeConstraints { (make) -> Void in
 			make.leading.equalTo(layoutMarginsGuide.snp.leading)
 			make.top.equalTo(safeAreaLayoutGuide.snp.top)
@@ -58,7 +60,7 @@ class LandmarkView: UIView {
 			make.trailing.equalTo(isFavoriteSwitch.snp.leading)
 			make.height.equalTo(44)
 		}
-		
+
 		isFavoriteSwitch.snp.makeConstraints { (make) -> Void in
 			make.leading.equalTo(isFavoriteLabel.snp.trailing)
 			make.top.equalTo(safeAreaLayoutGuide.snp.top)
@@ -66,18 +68,18 @@ class LandmarkView: UIView {
 			make.trailing.equalTo(layoutMarginsGuide.snp.trailing)
 			make.height.equalTo(44)
 		}
-		
+
 		tableView.snp.makeConstraints { (make) -> Void in
 			make.bottom.equalTo(self.layoutMarginsGuide.snp.bottom)
 			make.leading.equalTo(self.snp.leading)
 			make.trailing.equalTo(self.snp.trailing)
 		}
     }
-	
+
 	func getSwitchValue() -> Bool {
 		return isFavoriteSwitch.isOn
 	}
-	
+
 	func updateTableViewData(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
 		tableView.dataSource = dataSource
 		tableView.delegate = delegate

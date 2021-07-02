@@ -6,26 +6,24 @@
 import UIKit
 
 protocol LandmarkPresentationLogic {
-    func presentSomething(response: Landmark.Something.Response)
+    func presentData(response: Landmark.LoadData.Response)
 }
 
 class LandmarkPresenter: LandmarkPresentationLogic {
     weak var viewController: LandmarkDisplayLogic?
 
-    func presentSomething(response: Landmark.Something.Response) {
-        var viewModel: Landmark.Something.ViewModel
-        
+    func presentData(response: Landmark.LoadData.Response) {
+        var viewModel: Landmark.LoadData.ViewModel
         switch response.result {
         case let .failure(error):
-            viewModel = Landmark.Something.ViewModel(state: .error(message: error.localizedDescription))
+            viewModel = Landmark.LoadData.ViewModel(state: .error(message: error.localizedDescription))
         case let .success(result):
             if result.isEmpty {
-                viewModel = Landmark.Something.ViewModel(state: .emptyResult)
-            } else {
-                viewModel = Landmark.Something.ViewModel(state: .result(result))
+                viewModel = Landmark.LoadData.ViewModel(state: .emptyResult)
+				break
             }
+			viewModel = Landmark.LoadData.ViewModel(state: .result(result))
         }
-        
-        viewController?.displaySomething(viewModel: viewModel)
+        viewController?.displayData(viewModel: viewModel)
     }
 }

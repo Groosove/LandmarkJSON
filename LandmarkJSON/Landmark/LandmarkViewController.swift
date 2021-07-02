@@ -6,11 +6,11 @@
 import UIKit
 
 protocol LandmarkDisplayLogic: AnyObject {
-    func displaySomething(viewModel: Landmark.Something.ViewModel)
+    func displayData(viewModel: Landmark.LoadData.ViewModel)
 }
 
 protocol LandmarkViewControllerDelegate: AnyObject {
-	func landmarkDescription(id: Int)
+	func landmarkDescription(landmarkId: Int)
 }
 
 class LandmarkViewController: UIViewController, LandmarkViewDelegate {
@@ -18,14 +18,14 @@ class LandmarkViewController: UIViewController, LandmarkViewDelegate {
     var state: Landmark.ViewControllerState
 	private var switchValue = true
 	var tableDataSource = LandmarkDataStore()
-	var tableDelegate = LandmarkTableViewDelegate()
+	var tableHandler = LandmarkTableViewDelegate()
 	lazy var customView = self.view as? LandmarkView
-	
+
     init(interactor: LandmarkBusinessLogic, initialState: Landmark.ViewControllerState = .loading) {
         self.interactor = interactor
         self.state = initialState
-        super.init(nibName: nil, bundle: nil)
-		tableDelegate.delegate = self
+		super.init(nibName: nil, bundle: nil)
+		tableHandler.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -40,18 +40,18 @@ class LandmarkViewController: UIViewController, LandmarkViewDelegate {
         super.viewDidLoad()
 		navigationController?.navigationBar.prefersLargeTitles = true
 		navigationItem.title = "Landmarks"
-        doSomething()
+		parseJSON()
     }
 
-    @objc func doSomething() {
+    @objc func parseJSON() {
 		switchValue = !switchValue
-		let request = Landmark.Something.Request(isActive: switchValue)
-        interactor.doSomething(request: request)
+		let request = Landmark.LoadData.Request(isActive: switchValue)
+        interactor.parseJSON(request: request)
     }
 }
 
 extension LandmarkViewController: LandmarkDisplayLogic {
-    func displaySomething(viewModel: Landmark.Something.ViewModel) {
+    func displayData(viewModel: Landmark.LoadData.ViewModel) {
         display(newState: viewModel.state)
     }
 
@@ -63,20 +63,18 @@ extension LandmarkViewController: LandmarkDisplayLogic {
         case let .error(message):
             print("error \(message)")
         case let .result(items):
-			tableDelegate.models = items
+			tableHandler.models = items
 			tableDataSource.models = items
-			customView?.updateTableViewData(delegate: tableDelegate, dataSource: tableDataSource)
-            print("result: \(items)")
+			customView?.updateTableViewData(delegate: tableHandler, dataSource: tableDataSource)
         case .emptyResult:
-            print("empty result")
+            print("Empty result")
         }
     }
 }
 
 extension LandmarkViewController: LandmarkViewControllerDelegate {
-	func landmarkDescription(id: Int) {
-		let rootVC = LandmarkDescriptionViewController()
-		let navVC = UINavigationController()
-		navVC.pushViewController(rootVC, animated: true)
+	func landmarkDescription(landmarkId: Int) {
+		let rootVC = LandmarkDescriptionViewController(dataSource: tableDataSource.models, landmarkId: landmarkId)
+		self.navigationController?.pushViewController(rootVC, animated: true)
 	}
 }

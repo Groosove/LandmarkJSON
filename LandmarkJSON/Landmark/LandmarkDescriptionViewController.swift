@@ -8,23 +8,34 @@
 import UIKit
 
 class LandmarkDescriptionViewController: UIViewController {
+	var model: LandmarkModel?
+	init(dataSource: [LandmarkModel], landmarkId: Int) {
+		for item in dataSource where item.id == landmarkId {
+			self.model = item
+			break
+		}
+		super.init(nibName: nil, bundle: nil)
+	}
 
-    override func viewDidLoad() {
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
+	override func loadView() {
+		guard let model = self.model else { return }
+		self.view = LandmarkDescriprionView(model: model)
+	}
+	override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-		view.backgroundColor = .orange
+		setUpNavigationBar()
+		view.backgroundColor = .white
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	private func setUpNavigationBar() {
+		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Landmarks", style: .plain, target: nil, action: nil)
+		navigationItem.title = model?.name
+		navigationItem.largeTitleDisplayMode = .never
+	}
 
 }
